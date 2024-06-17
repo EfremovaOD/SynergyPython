@@ -1,0 +1,36 @@
+import random
+
+number = random.randint(1, 100)
+
+attempts = 0
+
+max_attempts = 5
+
+print ("Добро пожаловать в игру - Угадай число. У Вас есть 5 попыток!")
+
+while True:
+
+ guess = int(input("Введите ваше предположение: "))
+
+ if guess < number:
+   
+    print ("Загаданное число больше.")
+
+    attempts += 1
+ 
+ elif guess > number:
+   
+    print ("Загаданное число меньше.")
+
+    attempts += 1
+
+ elif guess == number:
+    
+     print ("Поздравляю! Вы угадали число.")
+     break 
+
+ if attempts == max_attempts:
+     
+    print ("К сожалению, вы использовали все попытки. Попробуйте еще раз.")
+ 
+    print ("Игра окончена. Спасибо за участие!")
