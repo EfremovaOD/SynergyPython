@@ -1,0 +1,25 @@
+import math
+
+def factorial(n):
+    if n < 0:
+        return None
+    return math.factorial(n)
+
+def get_positive_integer():
+    while True:
+        try:
+            n = int(input("Введите положительное целое число: "))
+            if n <= 0:
+                print("Введите положительное число!")
+            else:
+                return n
+        except ValueError:
+            print("Ошибка! Введите целое число.")
+
+n = get_positive_integer()
+result = factorial(n)
+
+if result is not None:
+    print(f"Факториал числа {n} равен {result}.")
+else:
+    print("Ошибка! Введено отрицательное число.")
